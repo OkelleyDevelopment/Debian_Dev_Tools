@@ -93,7 +93,7 @@ which git > /dev/null || prompt_git
 config_git
 
 # Get curl
-get_curl
+#get_curl
 
 # Neofetch
 get_neofetch

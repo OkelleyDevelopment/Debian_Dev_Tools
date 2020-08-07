@@ -1,5 +1,11 @@
 # Ubuntu DevSuite
 
+## Install in a single command
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Ubuntu-DevSuite/master/dev_suite.sh)
+```
+
 ## Motivation
 
 Practical bash scripting to automate the setup of the development

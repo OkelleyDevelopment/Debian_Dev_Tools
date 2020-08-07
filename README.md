@@ -1,6 +1,7 @@
 # Ubuntu DevSuite
 
 ## Install in a single command
+Have curl installed and then run:
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Ubuntu_DevSuite/master/dev_suite.sh)

@@ -78,7 +78,7 @@ get_neovim(){ \
 
 get_neovim_config() { \
     echo "Pulling neovim config install script."
-    bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Nvim-Configs/installScript/util/nvim_install.sh)>
+    bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Nvim-Configs/installScript/util/nvim_install.sh)
 }
 
 # Welcome message

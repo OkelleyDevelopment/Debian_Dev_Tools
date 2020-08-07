@@ -34,14 +34,11 @@ prompt_git() { \
 }
 
 config_git() { \
-    echo "Before we continue, what name would you like to us in GIT user.name?"
+    echo "Before we continue, what name would you like to use in GIT user.name?"
     read git_config_user_name
 
-    echo "What email for GIT?"
+    echo "What email would you like to use for GIT user.email?"
     read git_config_user_email
-
-    echo "What is your github username?"
-    read username
 
     git config --global user.name "$git_config_user_name"
     git config --global user.email $git_config_user_email
@@ -74,7 +71,6 @@ get_neovim(){ \
     echo "Installing neovim"
     sudo apt-get install neovim -y
 }
-
 
 get_neovim_config() { \
     echo "Pulling neovim config install script."

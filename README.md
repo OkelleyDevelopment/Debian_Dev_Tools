@@ -3,12 +3,17 @@
 ## Motivation
 
 Practical bash scripting to automate the setup of the development
-tools I use on a day-to-day basis.
+tools I use on a day-to-day basis. Writing this script has taught me some good basics
+about bash and will be updated as I learn to optimize.
 
-## Prerequisites
+## Installs
 
-## Program Compilation and Execution
-
-## Known Bugs
-
-## Future Goals
+- GIT VCS
+- cURL
+- neofetch
+- neovim
+- xClip
+- Discord
+- Zoom
+- Spotify
+- My neovim config

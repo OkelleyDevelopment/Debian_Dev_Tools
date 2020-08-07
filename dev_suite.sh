@@ -17,7 +17,7 @@ get_curl() { \
     sudo apt-get install curl -y
 }
 
-get_xClip() {\ 
+get_xClip() { \ 
     echo "Installing xClip for clipboard via CLI"
     sudo apt-get install xclip -y
 }
@@ -109,9 +109,6 @@ which snap > /dev/null || prompt_snap
 
 # Install discord
 get_Discord
-
-# Install Zoom (ew)
-get_Zoom
 
 # Spotify for the tunes
 get_Spotify

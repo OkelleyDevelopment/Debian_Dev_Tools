@@ -11,9 +11,9 @@ bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Ubuntu_DevSu
 
 Practical bash scripting to automate the setup of the development
 tools I use on a day-to-day basis. Writing this script has taught me some good basics
-about bash and will be updated as I learn to optimize.
+about bash and will be updated as I learn to optimize bash scripts.
 
-## Installs
+## Installed Tools
 
 - GIT VCS
 - cURL

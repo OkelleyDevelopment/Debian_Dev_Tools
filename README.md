@@ -1,4 +1,4 @@
-# Ubuntu DevSuite
+# Debian Dev Tools
 
 ## Install in a single command
 Have curl installed and then run:

@@ -4,7 +4,7 @@
 Have curl installed and then run:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Ubuntu_DevSuite/master/dev_suite.sh)
+bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Debian_Dev_Tools/master/dev_suite.sh)
 ```
 
 ## Motivation

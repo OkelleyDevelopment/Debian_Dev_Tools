@@ -1,11 +1,19 @@
 # Debian Dev Tools
 
 ## Install in a single command
-Have curl installed and then run:
+### WITHOUT the Neovim Config
+1. Have curl installed and then run:
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Debian_Dev_Tools/master/dev_suite.sh)
 ```
+### WITH the Neovim Config
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Debian_Dev_Tools/master/dev_no_nvim_config.sh)
+```
+
+
 
 ## Motivation
 

@@ -8,9 +8,16 @@ all the tools will be installed and ready to go!
 
 ## Prerequisites
 
-NOTE: Must have an internet connection to install the tools.
+1. Must have an internet connection to install the tools.
+2. Must have cURL installed.
 
 ## Program Execution
+
+Run in one command:
+
+```sh
+bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Debian_Dev_Tools/master/dev_suite.sh)
+```
 
 Assuming correct permissions
 
@@ -23,6 +30,8 @@ If permissions are incorrect, then run:
 ```
 chmod 755
 ```
+
+and the above command.
 
 ## Future Goals
 

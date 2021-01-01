@@ -1,26 +1,42 @@
-# Debian Dev Tools
-
-## Install in a single command
-Have curl installed and then run:
-
-```bash
-bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Debian_Dev_Tools/master/dev_suite.sh)
-```
+# Debian Development Suite
 
 ## Motivation
 
-Practical bash scripting to automate the setup of the development
-tools I use on a day-to-day basis. Writing this script has taught me some good basics
-about bash and will be updated as I learn to optimize bash scripts.
+Manual installs of tools that are commonly used in a development environment becomes cumbersome
+and can cause tools to be forgotten between installs. With this bash script automating the process,
+all the tools will be installed and ready to go!
+
+## Prerequisites
+
+NOTE: Must have an internet connection to install the tools.
+
+## Program Execution
+
+Assuming correct permissions
+
+```
+./dev_suite.sh
+```
+
+If permissions are incorrect, then run:
+
+```
+chmod 755
+```
+
+## Future Goals
+
+- Add a small yes/no gathering for which tools to install saving space for unwanted software.
+- Convert this script for Arch based distros
 
 ## Installed Tools
 
-- GIT VCS
-- cURL
+- GIT
+- NodeJS
+- Pip3
 - neofetch
-- neovim
+- NeoVim
 - xClip
 - Discord
-- Zoom
 - Spotify
-- My neovim config
+- My custom [NeoVim Config](https://github.com/OkelleyDevelopment/Nvim-Config)

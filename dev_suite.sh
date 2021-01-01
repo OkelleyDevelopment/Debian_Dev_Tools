@@ -55,13 +55,6 @@ get_Spotify() {
     sudo snap install spotify
 }
 
-get_Zoom() { \
-    echo 'Installing Zoom'
-    wget -c https://zoom.us/client/latest/zoom_amd64.deb
-    sudo dpkg -i zoom_amd64.deb
-    sudo apt-get install -f -y && rm zoom_amd64.deb
-}
-
 prompt_snap(){
     echo "Installing snapd"
     sudo apt-get install snapd
@@ -77,6 +70,19 @@ get_neovim_config() { \
     bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Nvim-Configs/installScript/util/nvim_install.sh)
 }
 
+promptNode() {\
+    echo "NodeJS not found, installing ... "
+    sudo apt install nodejs -y
+    sudo apt install npm -y
+    echo "Done."
+}
+
+promptPipInstall() { \
+    echo "pip3 not found, installing now ..."
+    sudo apt install python3-pip -y
+    echo "Done."
+}
+
 # Welcome message
 echo "Welcome to the Ubuntu DevSuite"
 
@@ -88,8 +94,13 @@ which git > /dev/null || prompt_git
 # set up user
 config_git
 
-# Get curl
-#get_curl
+# Install pip3 
+which pip3 > /dev/null && echo "pip3 installed, moving on..." || promptPipInstall
+
+# NodeJS
+which node > /dev/null && echo "NodeJS installed, moving on..." || promptNode
+
+
 
 # Neofetch
 get_neofetch
@@ -110,10 +121,15 @@ get_Discord
 get_Spotify
 
 # Set up neovim
-#get_neovim_config
+echo "Would you like to install OkelleyDevelopment's NeoVim Config? (y or n)"
+read yea_or_nay
+
+if [ yea_or_nay == 'y' ]
+then
+    get_neovim_config
+fi
 
 # Clean up
 system_cleanup
-echo "... This concludes setup. Enjoy :)"
 
 neofetch

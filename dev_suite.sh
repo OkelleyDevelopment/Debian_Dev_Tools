@@ -100,8 +100,6 @@ which pip3 > /dev/null && echo "pip3 installed, moving on..." || promptPipInstal
 # NodeJS
 which node > /dev/null && echo "NodeJS installed, moving on..." || promptNode
 
-
-
 # Neofetch
 get_neofetch
 

@@ -44,22 +44,6 @@ config_git() { \
     git config --global user.email $git_config_user_email
 }
 
-get_Discord() { \ 
-    echo 'Installing Discord'
-    wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
-    sudo dpkg -i discord.deb
-    sudo apt-get install -f -y && rm discord.deb
-}
-
-get_Spotify() {
-    sudo snap install spotify
-}
-
-prompt_snap(){
-    echo "Installing snapd"
-    sudo apt-get install snapd
-}
-
 get_neovim(){ \
     echo "Installing neovim"
     sudo apt-get install neovim -y
@@ -67,7 +51,7 @@ get_neovim(){ \
 
 get_neovim_config() { \
     echo "Pulling neovim config install script."
-    bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Nvim-Configs/installScript/util/nvim_install.sh)
+    bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Nvim-Config/master/util/install.sh)
 }
 
 promptNode() {\
@@ -81,6 +65,11 @@ promptPipInstall() { \
     echo "pip3 not found, installing now ..."
     sudo apt install python3-pip -y
     echo "Done."
+}
+
+get_java() {
+    sudo apt install openjdk-11-jre-headless 
+    apt install default-jdk-headless
 }
 
 # Welcome message
@@ -108,15 +97,6 @@ get_neovim
 
 # Clipboard toool
 get_xClip
-
-# Check for snapd
-which snap > /dev/null || prompt_snap
-
-# Install discord
-get_Discord
-
-# Spotify for the tunes
-get_Spotify
 
 # Set up neovim
 echo "Would you like to install OkelleyDevelopment's NeoVim Config? (y or n)"

@@ -9,29 +9,33 @@ all the tools will be installed and ready to go!
 ## Prerequisites
 
 1. Must have an internet connection to install the tools.
-2. Must have cURL installed.
+2. Must have cURL installed for the bash commands below
 
-## Program Execution
+## Fancy one-liners
 
-Run in one command:
+Copy the whole line for each command:
 
 ```sh
 bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Debian_Dev_Tools/master/dev_suite.sh)
+
+bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Debian_Dev_Tools/master/qol.sh)
 ```
 
-Assuming correct permissions
+## Manual Install
+
+Assuming correct permissions once you clone the repository or run a wget:
 
 ```
 ./dev_suite.sh
+
+./qol.sh
 ```
 
 If permissions are incorrect, then run:
 
 ```
-chmod 755
+chmod 755 <dev_suite | qol>.sh
 ```
-
-and the above command.
 
 ## Future Goals
 
@@ -40,12 +44,21 @@ and the above command.
 
 ## Installed Tools
 
+After updating your system, the script will then install:
+
+### Dev Suite
+
 - GIT
 - NodeJS
 - Pip3
 - neofetch
 - NeoVim
 - xClip
-- Discord
-- Spotify
+- Java 11 and default-jdk
+
+### Q.O.L (Quality of Life)
+
+- Discord -- official debian package
+- Spotify -- official repository
 - My custom [NeoVim Config](https://github.com/OkelleyDevelopment/Nvim-Config)
+- Brave browser -- offical repository

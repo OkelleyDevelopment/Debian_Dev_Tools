@@ -1,5 +1,10 @@
 #!/bin/bash
-
+#  A script to install common developer tools on a (Currently) debian based Linux Distros
+#  
+# Author: Nicholas O'Kelley
+# Date: Aug 6, 2020
+# Last Modified: March 31, 2021
+#
 system_update() { \
     echo "Updating the system..."
     sudo apt-get update && sudo apt-get upgrade
@@ -73,7 +78,7 @@ get_java() {
 }
 
 # Welcome message
-echo "Welcome to the Ubuntu DevSuite"
+echo "Welcome to the Development Tool Suite"
 
 # Update the system
 system_update
@@ -89,14 +94,14 @@ which pip3 > /dev/null && echo "pip3 installed, moving on..." || promptPipInstal
 # NodeJS
 which node > /dev/null && echo "NodeJS installed, moving on..." || promptNode
 
-# Neofetch
-get_neofetch
-
 # Get NeoVim
 get_neovim
 
 # Clipboard toool
 get_xClip
+
+# Neofetch
+get_neofetch
 
 # Set up neovim
 echo "Would you like to install OkelleyDevelopment's NeoVim Config? (y or n)"

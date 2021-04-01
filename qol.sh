@@ -1,4 +1,12 @@
 #!/bin/bash
+# A script to install common quality of life apps on 
+# (Currently) debian based Linux Distros
+#  
+# Author: Nicholas O'Kelley
+# Date: Aug 6, 2020
+# Last Modified: March 25, 2021
+#
+
 system_update() { \
     echo "Updating the system..."
     sudo apt-get update && sudo apt-get upgrade

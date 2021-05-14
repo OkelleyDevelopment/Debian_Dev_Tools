@@ -4,7 +4,7 @@
 #  
 # Author: Nicholas O'Kelley
 # Date: Aug 6, 2020
-# Last Modified: March 25, 2021
+# Last Modified: May 14th, 2021
 #
 
 system_update() { \
@@ -48,29 +48,40 @@ system_update
 clear
 
 # Welcome message
-echo "Welcome to the Quality of Life Tools Install"
-echo "Would you like to install the following (y or n):"
+echo "Welcome to the Quality of Life Tools Install\n"
 echo "-----------------"
 echo "Discord"
 echo "Spotify"
 echo "Brave"
 echo "-----------------"
 
+echo "Install Discord? (y/n)>"
 read yea_or_nay
 
-if [ yea_or_nay == 'y' ]; then
-
-# Install discord
-get_Discord
-
-# Spotify for the tunes
-get_Spotify
-
-# Install Brave browser
-get_Brave
-
-# Clean up apt
-system_cleanup
-
+if [ "$yea_or_nay" == "y" ]; then
+    # Install discord
+    get_Discord
 fi
 
+echo "Install Spotify? (y/n)>"
+read yea_or_nay
+
+if [ "$yea_or_nay" == "y" ]; then
+    # Spotify for the tunes
+    get_Spotify
+fi
+
+echo "Install Brave Browser? (y/n)>"
+read yea_or_nay
+
+if [ "$yea_or_nay" == "y" ]; then
+    # Install Brave browser
+    get_Brave
+fi
+
+
+# Clean up apt
+system_cleanup > /dev/null
+
+echo "Now exiting the QOL..."
+exit 0;

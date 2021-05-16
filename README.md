@@ -13,7 +13,8 @@ all the tools will be installed and ready to go!
 
 ## Fancy one-liners
 
-Copy the whole line for each command:
+For those that trust this script, you can
+copy the whole line for each command:
 
 ```sh
 bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Debian_Dev_Tools/master/dev_suite.sh)
@@ -60,5 +61,4 @@ After updating your system, the script will then install:
 
 - Discord -- official debian package
 - Spotify -- official repository
-- My custom [NeoVim Config](https://github.com/OkelleyDevelopment/Nvim-Config)
 - Brave browser -- offical repository

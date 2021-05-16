@@ -1,4 +1,4 @@
-# Debian Development Suite
+# Dev Tools
 
 ## Motivation
 
@@ -17,9 +17,9 @@ For those that trust this script, you can
 copy the whole line for each command:
 
 ```sh
-bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Debian_Dev_Tools/master/dev_suite.sh)
+bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Dev_Tools/master/dev_tools.sh)
 
-bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Debian_Dev_Tools/master/qol.sh)
+bash <(curl -s https://raw.githubusercontent.com/OkelleyDevelopment/Dev_Tools/master/qol.sh)
 ```
 
 ## Manual Install

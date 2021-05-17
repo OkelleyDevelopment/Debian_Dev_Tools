@@ -67,7 +67,7 @@ promptNode() {\
 }
 
 promptPipInstall() { \
-    echo "pip3 not found, installing now ..."
+    echo "pip3 not found, installing ..."
     sudo apt install python3-pip -y
     echo "Done."
 }
@@ -113,6 +113,10 @@ then
 fi
 
 # Clean up
-system_cleanup
+system_cleanup 
 
+# Clear the screen
+clear
+
+# System Info
 neofetch

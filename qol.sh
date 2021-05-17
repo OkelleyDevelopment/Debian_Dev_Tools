@@ -48,7 +48,8 @@ system_update
 clear
 
 # Welcome message
-echo "Welcome to the Quality of Life Tools Install\n"
+echo " "
+echo "Welcome to the Quality of Life Tools Install"
 echo "-----------------"
 echo "Discord"
 echo "Spotify"
@@ -83,5 +84,4 @@ fi
 # Clean up apt
 system_cleanup > /dev/null
 
-echo "Now exiting the QOL..."
 exit 0;

@@ -19,6 +19,27 @@ get_rust() {
     # TODO: add the export for the rust cargo stuff
 }
 
-get_java
+get_flex_buildEssential() { \
+    sudo apt install flex;
+    sudo apt install build-essential;
+}
 
-get_rust
+echo "Install Java 11? (y/n) > "
+read java
+
+echo "Install Rust lang? (y/n) > "
+read answer
+
+
+# Install Java
+if [ "$java" == 'y' ]; then
+    get_java
+fi
+
+# Install Rust
+if [ "$answer" == 'y' ]; then
+    get_flex_buildEssential
+    get_rust
+fi
+
+

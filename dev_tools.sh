@@ -3,7 +3,7 @@
 #  
 # Author: Nicholas O'Kelley
 # Date: Aug 6, 2020
-# Last Modified: March 31, 2021
+# Last Modified: May 21, 2021
 #
 system_update() { \
     echo "Updating the system..."
@@ -72,11 +72,6 @@ promptPipInstall() { \
     echo "Done."
 }
 
-get_java() {
-    sudo apt install openjdk-11-jre-headless 
-    apt install default-jdk-headless
-}
-
 # Welcome message
 echo "Welcome to the Development Tool Suite"
 
@@ -104,11 +99,12 @@ get_xClip
 get_neofetch
 
 # Set up neovim
-echo "Would you like to install OkelleyDevelopment's NeoVim Config? (y or n)"
+# TODO: This can become a list of configs that allows the user to choose the config
+# they install.
+echo "Would you like to install OkelleyDevelopment's NeoVim Config? (y/n) > "
 read yea_or_nay
 
-if [ yea_or_nay == 'y' ]
-then
+if [ "$yea_or_nay" == 'y' ]; then
     get_neovim_config
 fi
 

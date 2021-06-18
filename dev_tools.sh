@@ -3,8 +3,12 @@
 #  
 # Author: Nicholas O'Kelley
 # Date: Aug 6, 2020
-# Last Modified: May 21, 2021
+# Last Modified: Jun 17, 2021
 #
+
+set -o nounset # error when reference to undefined variables
+set -o errexit # error out of the script
+
 system_update() { \
     echo "Updating the system..."
     sudo apt-get update && sudo apt-get upgrade
@@ -25,11 +29,6 @@ get_curl() { \
 get_xClip() { \ 
     echo "Installing xClip for clipboard via CLI"
     sudo apt-get install xclip -y
-}
-
-get_neofetch() { \
-    echo "Installing neofetch"
-    sudo apt-get install neofetch -y
 }
 
 prompt_git() { \
@@ -60,10 +59,20 @@ get_neovim_config() { \
 }
 
 promptNode() {\
+
     echo "NodeJS not found, installing ... "
+    curl -fsSL https://fnm.vercel.app/install | bash
+    [ -n "$(uname -a | grep Ubuntu)" ] && installnodeubuntu
+    echo "Done."
+}
+
+installnodeubuntu(){ \
     sudo apt install nodejs -y
     sudo apt install npm -y
-    echo "Done."
+    mkdir ~/.npm-global
+    npm config set prefix '~/.npm-global'
+    echo export PATH=~/.npm-global/bin:$PATH >> ~/.profile;  
+    source ~/.profile
 }
 
 promptPipInstall() { \
@@ -114,5 +123,8 @@ system_cleanup
 # Clear the screen
 clear
 
-# System Info
-neofetch
+echo " "
+echo "Initial Setup complete."
+echo " "
+
+exit 0;
